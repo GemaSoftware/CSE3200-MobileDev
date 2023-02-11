@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="quizAppHeader">My Lab2 Quiz App!</string>
-    <string name="true_button">True</string>
-    <string name="false_button">False</string>
-    <string name="quizQuestion">This is where the question will go</string>
-    <string name="scoreView">Score:</string>
-    <string name="scoreNumber">0</string>
+    <string name="question_1">Tokyo is the capital of Japan</string>
+    <string name="question_2">Euro is the currency of Japan</string>
+    <string name="question_3">Japans flag consists of green and blue</string>
+    <string name="question_4">Japan\'s current population is 126 million</string>
+    <string name="question_5">Mt.Fuji is the highest mountain in Japan</string>
 </resources>

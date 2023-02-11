@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="quizAppHeader">私のLab2クイズアプリ!</string>
-    <string name="true_button">真</string>
-    <string name="false_button">偽</string>
-    <string name="quizQuestion">これは質問が行くところです</string>
-    <string name="scoreView">スコア：</string>
-    <string name="scoreNumber">0</string>
+    <string name="question_1">東京は日本の首都です</string>
+    <string name="question_2">ユーロは日本の通貨です</string>
+    <string name="question_3">日本の国旗は緑と青で構成されています</string>
+    <string name="question_4">日本の現在の人口は1億2600万人</string>
+    <string name="question_5">富士山は日本で一番高い山です</string>
 </resources>
