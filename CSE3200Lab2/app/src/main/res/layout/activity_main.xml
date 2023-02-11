@@ -21,8 +21,70 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/quizAppHeader"
-            android:layout_marginTop="30dp"
+            android:layout_margin="30dp"
             android:textSize="30sp"
             tools:text="My Lab 2 Quiz App" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/quizQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:text="@string/quizQuestion"
+                tools:text="This is where the quiz question will reside."/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/true_button" />
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/false_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/scoreView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="25sp"
+                    android:text="@string/scoreView"
+                    tools:text="Score:" />
+
+                <TextView
+                    android:id="@+id/scoreNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/scoreNumber"
+                    android:textSize="25sp"
+                    tools:text="0" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

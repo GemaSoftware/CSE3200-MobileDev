@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="quizAppHeader">私のLab2クイズアプリ!</string>
+    <string name="true_button">真</string>
+    <string name="false_button">偽</string>
+    <string name="quizQuestion">これは質問が行くところです</string>
+    <string name="scoreView">スコア：</string>
+    <string name="scoreNumber">0</string>
+</resources>
