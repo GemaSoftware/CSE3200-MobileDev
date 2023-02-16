@@ -7,4 +7,9 @@
     <string name="quizQuestion">これは質問が行くところです</string>
     <string name="scoreView">スコア：</string>
     <string name="scoreNumber">0</string>
+    <string name="correct_message">正しい！</string>
+    <string name="incorrect_message">正しくない！</string>
+    <string name="quiz_end">クイズの終了</string>
+    <string name="end_of_quiz">End of Quiz</string>
+    <string name="welcome_quiz">クイズへようこそ!</string>
 </resources>

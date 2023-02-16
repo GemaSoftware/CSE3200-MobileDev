@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_quiz_fragment">
+
+    <fragment
+        android:id="@+id/main_quiz_fragment"
+        android:name="com.agrongemajli.cse3200_lab2.main_quiz"
+        android:label="fragment_main_quiz"
+        tools:layout="@layout/fragment_main_quiz" >
+        <action
+            android:id="@+id/action_main_quiz_to_quiz_end"
+            app:destination="@id/quiz_end" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz_end"
+        android:name="com.agrongemajli.cse3200_lab2.quiz_end"
+        android:label="fragment_quiz_end"
+        tools:layout="@layout/fragment_quiz_end" />
+</navigation>

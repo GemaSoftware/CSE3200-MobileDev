@@ -6,4 +6,9 @@
     <string name="quizQuestion">This is where the question will go</string>
     <string name="scoreView">Score:</string>
     <string name="scoreNumber">0</string>
+    <string name="correct_message">Correct!</string>
+    <string name="incorrect_message">Incorrect!</string>
+    <string name="quiz_end">End of Quiz!</string>
+    <string name="end_of_quiz">End of Quiz</string>
+    <string name="welcome_quiz">Welcome to the Quiz!</string>
 </resources>
