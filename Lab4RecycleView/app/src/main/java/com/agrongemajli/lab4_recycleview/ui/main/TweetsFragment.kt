@@ -38,7 +38,7 @@ class TweetsFragment : Fragment() {
 
         // Set up the RecyclerView with a LinearLayoutManager and the adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TweetsAdapter(tweetViewModel.tweets)
+        recyclerView.adapter = TweetsAdapter(tweetViewModel.tweets, tweetViewModel.imageURLs)
 
         return rootView
 
