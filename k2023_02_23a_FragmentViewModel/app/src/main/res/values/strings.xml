@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">k2023_02_23a_FragmentViewModel</string>
+    <string name="tweet_text">Example Tweet Here</string>
+</resources>

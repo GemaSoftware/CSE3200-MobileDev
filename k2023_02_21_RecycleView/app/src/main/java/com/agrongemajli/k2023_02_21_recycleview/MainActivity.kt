@@ -7,5 +7,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val flowerList = DataSource(this).getFlowerList()
+
+        for(f in flowerList){
+            println(f)
+        }
     }
 }
