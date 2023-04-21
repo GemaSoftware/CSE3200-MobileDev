@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CSE3200-RadioVideoLab</string>
+    <string name="radio_service_start">Start RService</string>
+    <string name="radio_service_stop">Stop RService</string>
+</resources>
