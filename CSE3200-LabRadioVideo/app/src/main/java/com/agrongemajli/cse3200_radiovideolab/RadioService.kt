@@ -11,7 +11,7 @@ import android.util.Log
 class RadioService : Service() {
 
     private lateinit var player: MediaPlayer
-    private var myUri = "http://stream.whus.org:8000/whusfm"
+    private var myUri = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         super.onStartCommand(intent, flags, startId)
@@ -29,12 +29,13 @@ class RadioService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i("AGRON", "stopped rservice")
+        Log.i("GSOFTAG", "stopped rservice")
         player.stop()
         player.release()
     }
 
     fun setUpRadio(uri: String){
+        Log.i("GSOFTAG", "setting up rservice")
     player = MediaPlayer().apply {
         setAudioAttributes(
             AudioAttributes.Builder()
@@ -42,8 +43,11 @@ class RadioService : Service() {
                 .setUsage(AudioAttributes.USAGE_MEDIA)
                 .build()
         )
+        Log.i("GSOFTAG", "setting up datasource audio")
         setDataSource(applicationContext, Uri.parse(uri))
+        Log.i("GSOFTAG", "set the datasource")
         prepare()
+        Log.i("GSOFTAG", "preparedAUD")
         start()
     }
     }

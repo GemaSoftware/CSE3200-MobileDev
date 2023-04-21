@@ -16,8 +16,9 @@ import com.agrongemajli.cse3200_radiovideolab.models.VideoCommands
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var messenger: Messenger? = null
-    private lateinit var msg: Message
+    private lateinit var vidService: BoundVideoService
+    private var mBoundVideo: Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,18 +26,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.startRadioServiceButton.setOnClickListener {
-            Log.i("AGR", "Clicked Button for service")
-            //startService(Intent(this, RadioService::class.java))
-            msg = Message.obtain(null, VideoCommands.START.ordinal, 4, -5)
-            messenger?.send(msg)
-            msg.recycle()
+            Log.i("AGR", "Clicked Button to start stuff")
+            startService(Intent(this, RadioService::class.java))
+            vidService.playVideo()
 
         }
         binding.stopRadioServiceButton.setOnClickListener {
-            //stopService(Intent(this, RadioService::class.java))
-            msg = Message.obtain(null, VideoCommands.STOP.ordinal, 4, -5)
-            messenger?.send(msg)
-            msg.recycle()
+            stopService(Intent(this, RadioService::class.java))
+            vidService.pauseVideo()
         }
 
     }
@@ -46,16 +43,23 @@ class MainActivity : AppCompatActivity() {
         bindService(Intent(this, BoundVideoService::class.java), connection, Context.BIND_AUTO_CREATE)
     }
 
+    override fun onStop() {
+        super.onStop()
+        unbindService(connection)
+        mBoundVideo = false
+
+    }
+
     private val connection = object: ServiceConnection {
         override fun onServiceConnected(p0: ComponentName?, service: IBinder?) {
-            messenger = Messenger(service)
             val videoServiceBinder = service as BoundVideoService.BoundVideoServiceBinder
-            videoServiceBinder.getService().setVideoView(binding.videoViewContainer)
-
+            vidService = videoServiceBinder.getService()
+            vidService.setSurfaceHolder(binding.vidSurfView.holder)
+            mBoundVideo = true
         }
 
         override fun onServiceDisconnected(p0: ComponentName?) {
-            messenger = null // Not ideal
+            mBoundVideo = false
         }
     }
 }
